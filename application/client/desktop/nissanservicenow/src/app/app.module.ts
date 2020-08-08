@@ -1,44 +1,46 @@
-import { FooterModule } from './footer/footer.module';
-import { TemplateModule } from './template/template.module';
-import { HeaderModule } from './header/header.module';
-import { AppComponent } from './app.component';
-import { TranslatorModule } from './translator/translator.module';
-import { AppRoutingModule } from './app-routing.module';
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { LoginModule } from './login/login.module';
-import { SignupModule } from './signup/signup.module';
-import { HomeModule } from './home/home.module';
-import { AuthorizationComponent } from './authorization/authorization.component';
-import { UserModule } from './user/user.module';
-import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { UserModule } from './user/user.module';
+import { AuthorizationComponent } from './authorization/authorization.component';
+import { HomeModule } from './home/home.module';
+import { SignupModule } from './signup/signup.module';
+import { LoginModule } from './login/login.module';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
+import { TranslatorModule } from './translator/translator.module';
+import { AppComponent } from './app.component';
+import { HeaderModule } from './header/header.module';
+import { TemplateModule } from './template/template.module';
+import { FooterModule } from './footer/footer.module';
+import { AdminModule } from './admin/admin.module';
 import { SuppliertselficketingModule } from './suppliertselficketing/suppliertselficketing.module';
 
 @NgModule({
   declarations: [
-  AppComponent,
-AuthorizationComponent
+  AuthorizationComponent,
+  AppComponent
 ],
   imports: [
 SuppliertselficketingModule,
-  FooterModule,
-TemplateModule,
-HeaderModule,
-TranslatorModule,
-AppRoutingModule,
-BrowserModule,
-LoginModule,
-SignupModule,
-HomeModule,
-UserModule,
+  FormsModule,
 HttpClientModule,
-FormsModule
+UserModule,
+HomeModule,
+SignupModule,
+LoginModule,
+BrowserModule,
+AppRoutingModule,
+TranslatorModule,
+HeaderModule,
+TemplateModule,
+  FooterModule,
+AdminModule
 ],
   providers: [
   ],
   bootstrap: [
-  AppComponent
+    AppComponent
 ]
 })
 export class AppModule { }
